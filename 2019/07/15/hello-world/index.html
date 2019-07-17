@@ -396,6 +396,7 @@ gitalk.render('gitalk-container')
     	<div class="footer-left">
     		&copy; 2019 Cqh-i
     	</div>
+		<script language=javascript>function siteTime(){window.setTimeout("siteTime()",1000);var seconds=1000;var minutes=seconds*60;var hours=minutes*60;var days=hours*24;var years=days*365;var today=new Date();var todayYear=today.getFullYear();var todayMonth=today.getMonth()+1;var todayDate=today.getDate();var todayHour=today.getHours();var todayMinute=today.getMinutes();var todaySecond=today.getSeconds();var t1=Date.UTC(2019,07,16,00,09,00);var t2=Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);var diff=t2-t1;var diffYears=Math.floor(diff/years);var diffDays=Math.floor((diff/days)-diffYears*365);var diffHours=Math.floor((diff-(diffYears*365+diffDays)*days)/hours);var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);document.getElementById("sitetime").innerHTML=" &nbsp;&nbsp;&nbsp;&nbsp;本站已运行 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"};siteTime();</script>
 		<span id="sitetime"></span>
 		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 		<span id="busuanzi_container_site_pv">
@@ -418,7 +419,6 @@ gitalk.render('gitalk-container')
         a_idx = (a_idx + 1) % a.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 100,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#ff6651"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});});});
 </script>
 <script type="text/javascript" src="/resources/love.js"></script>
-<script language=javascript>function siteTime(){window.setTimeout("siteTime()",1000);var seconds=1000;var minutes=seconds*60;var hours=minutes*60;var days=hours*24;var years=days*365;var today=new Date();var todayYear=today.getFullYear();var todayMonth=today.getMonth()+1;var todayDate=today.getDate();var todayHour=today.getHours();var todayMinute=today.getMinutes();var todaySecond=today.getSeconds();var t1=Date.UTC(2019,07,16,00,09,00);var t2=Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);var diff=t2-t1;var diffYears=Math.floor(diff/years);var diffDays=Math.floor((diff/days)-diffYears*365);var diffHours=Math.floor((diff-(diffYears*365+diffDays)*days)/hours);var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);document.getElementById("sitetime").innerHTML=" &nbsp;&nbsp;&nbsp;&nbsp;本站已运行 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"};siteTime();</script>
     </div>
     <script>
 	var yiliaConfig = {
