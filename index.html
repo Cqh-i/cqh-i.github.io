@@ -267,25 +267,24 @@
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
       	</div>
 	</div>
-	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> &||& <span id="busuanzi_container_site_uv">你是本博第 <span id="busuanzi_value_site_uv"></span> 位访客</span> || <span id="busuanzi_container_site_pv">历经 <span id="busuanzi_value_site_pv"></span> 次回眸才与你相遇</span> 
-    <script>
-        var now = new Date(); 
-        function createtime() { 
-            var grt= new Date("07/16/2019 00:09:00");//此处修改你的建站时间或者网站上线时间 
-            now.setTime(now.getTime()+250); 
-            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
-            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-        } 
-    setInterval("createtime()",250);
-    </script>
+		<span id="busuanzi_container_site_pv" style="display: inline!important;">
+			总访问量<span id="busuanzi_value_site_pv"></span> |
+		</span>
+		<span id="busuanzi_container_site_uv" style="display: inline!important;">
+			总访客数<span id="busuanzi_value_site_uv"></span>
+		</span>
+		<span id="sitetime"></span>
   </div>
 </footer>
+<!--单击显示文字和爱心-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+        /* 鼠标点击特效 - 7Core.CN */
+        var a_idx = 0;jQuery(document).ready(function($) {$("body").click(function(e) {var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 100,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#ff6651"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},1500,function() {$i.remove();});});});
+</script>
+<script type="text/javascript" src="/resources/love.js"></script>
+<script language=javascript>function siteTime(){window.setTimeout("siteTime()",1000);var seconds=1000;var minutes=seconds*60;var hours=minutes*60;var days=hours*24;var years=days*365;var today=new Date();var todayYear=today.getFullYear();var todayMonth=today.getMonth()+1;var todayDate=today.getDate();var todayHour=today.getHours();var todayMinute=today.getMinutes();var todaySecond=today.getSeconds();var t1=Date.UTC(2019,07,16,00,09,00);var t2=Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);var diff=t2-t1;var diffYears=Math.floor(diff/years);var diffDays=Math.floor((diff/days)-diffYears*365);var diffHours=Math.floor((diff-(diffYears*365+diffDays)*days)/hours);var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);document.getElementById("sitetime").innerHTML=" &nbsp;&nbsp;&nbsp;&nbsp;本站已运行 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"};siteTime();</script>
     </div>
     <script>
 	var yiliaConfig = {
