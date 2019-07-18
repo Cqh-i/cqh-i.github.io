@@ -182,7 +182,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">19字</span>
+        <span class="post-count">161字</span>
       </span>
     </span>
 
@@ -201,10 +201,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Spring-IOC-学习笔记"><a href="#Spring-IOC-学习笔记" class="headerlink" title="Spring IOC 学习笔记"></a>Spring IOC 学习笔记</h1><h2 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h2><blockquote>
-<p>全称 Inversion of Control(控制反转)</p>
+        <h1 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h1><blockquote>
+<p>全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。</p>
 </blockquote>
+<h1 id="与传统方式对比"><a href="#与传统方式对比" class="headerlink" title="与传统方式对比"></a>与传统方式对比</h1><pre><code>传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类:</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 某功能接口</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**   </span></span><br><span class="line"><span class="comment"> * 该功能接口的实现类一</span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl1</span> <span class="keyword">implements</span> <span class="title">UserService</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"UserServiceImpl1执行了。。。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**   </span></span><br><span class="line"><span class="comment"> * 该功能接口的实现类二</span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl2</span> <span class="keyword">implements</span> <span class="title">UserService</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"UserServiceImpl2执行了。。。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<pre><code>当我们</code></pre>
       
 		
 		
