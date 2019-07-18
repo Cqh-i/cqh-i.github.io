@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cqh-i.github.io/"/>
-  <updated>2019-07-18T06:07:00.202Z</updated>
+  <updated>2019-07-18T11:31:17.236Z</updated>
   <id>https://cqh-i.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring IOC 学习笔记</title>
+    <link href="https://cqh-i.github.io/2019/07/18/Spring-IOC-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cqh-i.github.io/2019/07/18/Spring-IOC-学习笔记/</id>
+    <published>2019-07-18T11:29:56.000Z</published>
+    <updated>2019-07-18T11:31:17.236Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Spring-IOC-学习笔记"><a href="#Spring-IOC-学习笔记" class="headerlink" title="Spring IOC 学习笔记"></a>Spring IOC 学习笔记</h1><h2 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h2><blockquote><p>全称 Inversion of Control(控制反转)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Spring-IOC-学习笔记&quot;&gt;&lt;a href=&quot;#Spring-IOC-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Spring IOC 学习笔记&quot;&gt;&lt;/a&gt;Spring IOC 学习笔记&lt;/h1&gt;&lt;h2 id=&quot;什么是-IOC&quot;&gt;&lt;a h
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
