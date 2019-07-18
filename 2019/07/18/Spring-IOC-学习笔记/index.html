@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://cqh-i.github.io">
-  <title>锦瑟年华,逐梦之人</title>
+  <title>Spring IOC 学习笔记 | 锦瑟年华,逐梦之人</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: Spring IOC 学习笔记date: 2019-07-18 19:29:56tags: 什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567">
+  <meta name="description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567891011121314151617181920212223242526/** 某功能接口*/public">
 <meta property="og:type" content="article">
-<meta property="og:title" content="锦瑟年华,逐梦之人">
+<meta property="og:title" content="Spring IOC 学习笔记">
 <meta property="og:url" content="https://cqh-i.github.io/2019/07/18/Spring-IOC-学习笔记/index.html">
 <meta property="og:site_name" content="锦瑟年华,逐梦之人">
-<meta property="og:description" content="title: Spring IOC 学习笔记date: 2019-07-18 19:29:56tags: 什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567">
+<meta property="og:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567891011121314151617181920212223242526/** 某功能接口*/public">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T14:13:00.948Z">
+<meta property="og:updated_time" content="2019-07-18T14:14:34.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="锦瑟年华,逐梦之人">
-<meta name="twitter:description" content="title: Spring IOC 学习笔记date: 2019-07-18 19:29:56tags: 什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567">
+<meta name="twitter:title" content="Spring IOC 学习笔记">
+<meta name="twitter:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567891011121314151617181920212223242526/** 某功能接口*/public">
   
     <link rel="alternative" href="/atom.xml" title="锦瑟年华,逐梦之人" type="application/atom+xml">
   
@@ -163,11 +163,55 @@
             <article id="post-Spring-IOC-学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Spring IOC 学习笔记
+    </h1>
+  
+
+		<!--显示阅读次数-->
+		
+			<br/>
+			<a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+			<span class="icon-sort"></span>
+			<span style="color:#ef7522;font-size:14px;">
+				阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+			</span>
+			</a>
+		
+		<!--显示阅读次数完毕-->
+        
+        <a href="/2019/07/18/Spring-IOC-学习笔记/" class="archive-article-date">
+  	<time datetime="2019-07-18T11:29:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+</a>
+			
+				<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">434字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+			
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: Spring IOC 学习笔记<br>date: 2019-07-18 19:29:56<br>tags:</p>
-<h2 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h2><blockquote>
+        <h2 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h2><blockquote>
 <p>全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。</p>
 </blockquote>
 <h2 id="与传统方式对比"><a href="#与传统方式对比" class="headerlink" title="与传统方式对比"></a>与传统方式对比</h2><p>&emsp;&emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类：</p>
