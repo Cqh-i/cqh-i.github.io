@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="锦瑟年华,逐梦之人">
 <meta property="og:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-19T08:55:23.386Z">
+<meta property="og:updated_time" content="2019-07-19T09:27:02.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring IOC 学习笔记">
 <meta name="twitter:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。">
@@ -193,7 +193,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.2k字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
 
@@ -202,7 +202,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -266,6 +266,14 @@
 </li>
 </ul>
 <p>运行结果：<code>UserDaoImpl1执行了。。。李四</code></p>
+<h3 id="Sping的IOC的注解详解"><a href="#Sping的IOC的注解详解" class="headerlink" title="Sping的IOC的注解详解"></a>Sping的IOC的注解详解</h3><ul>
+<li><strong>@Component</strong>：组件 修饰一个类，将这个类交给Spring管理。<blockquote>
+<p>(这个组件可以修饰任何一层的类，包括Dao，Service，web层。因为分层结构不明显，后来提供了三个衍生类，但目前来讲三个注解和Component功能一样，只是建议使用三个衍生注解，后面的版本可能会进行扩展)<br>三个衍生注解（功能类似）<br><strong>@Controller</strong>：web层<br><strong>@Service</strong>：service层<br><strong>@Repository</strong>：dao层</p>
+</blockquote>
+<h4 id="属性注入的注解"><a href="#属性注入的注解" class="headerlink" title="属性注入的注解"></a>属性注入的注解</h4></li>
+<li>普通属性：<br>　　<strong>@Value</strong>：设置普通属性的值</li>
+<li>对象类型属性：<br>　　@Autowired：设置对象属性的值，但是按照类型完成属性注入<br>　　替代注解@<strong>Resurce</strong>:设置对象属性的值，按照名字完成注入</li>
+</ul>
 
       
 		
@@ -424,7 +432,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-IOC"><span class="toc-number">1.</span> <span class="toc-text">什么是 IOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与传统方式对比"><span class="toc-number">2.</span> <span class="toc-text">与传统方式对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IOC的底层实现原理"><span class="toc-number">3.</span> <span class="toc-text">IOC的底层实现原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将实现类交给Spring管理"><span class="toc-number">3.1.</span> <span class="toc-text">将实现类交给Spring管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IOC-和-DI"><span class="toc-number">4.</span> <span class="toc-text">IOC 和 DI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-IOC-注解开发方式"><span class="toc-number">5.</span> <span class="toc-text">Spring IOC 注解开发方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注解方式设置属性的值"><span class="toc-number">5.1.</span> <span class="toc-text">注解方式设置属性的值</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-IOC"><span class="toc-number">1.</span> <span class="toc-text">什么是 IOC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与传统方式对比"><span class="toc-number">2.</span> <span class="toc-text">与传统方式对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IOC的底层实现原理"><span class="toc-number">3.</span> <span class="toc-text">IOC的底层实现原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将实现类交给Spring管理"><span class="toc-number">3.1.</span> <span class="toc-text">将实现类交给Spring管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IOC-和-DI"><span class="toc-number">4.</span> <span class="toc-text">IOC 和 DI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-IOC-注解开发方式"><span class="toc-number">5.</span> <span class="toc-text">Spring IOC 注解开发方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注解方式设置属性的值"><span class="toc-number">5.1.</span> <span class="toc-text">注解方式设置属性的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sping的IOC的注解详解"><span class="toc-number">5.2.</span> <span class="toc-text">Sping的IOC的注解详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#属性注入的注解"><span class="toc-number">5.2.1.</span> <span class="toc-text">属性注入的注解</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
