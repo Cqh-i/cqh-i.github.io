@@ -56,7 +56,7 @@
 		  <h1 class="header-author"><a href="/">Cqh-i</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">coding</p>
+		<p class="header-subtitle">你的问题,主要在于读书不多而想得太多</p>
 		
 
 		<nav class="header-menu">
@@ -113,7 +113,7 @@
 			  <h1 class="header-author js-header-author">Cqh-i</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>coding<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>你的问题,主要在于读书不多而想得太多<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -182,7 +182,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">434字</span>
+        <span class="post-count">786字</span>
       </span>
     </span>
 
@@ -191,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -204,19 +204,7 @@
         <h2 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h2><blockquote>
 <p>全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。</p>
 </blockquote>
-<h2 id="与传统方式对比"><a href="#与传统方式对比" class="headerlink" title="与传统方式对比"></a>与传统方式对比</h2><p>&emsp;&emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 某功能接口</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**   </span></span><br><span class="line"><span class="comment"> * 该功能接口的实现类一</span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl1</span> <span class="keyword">implements</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"UserDaoImpl1执行了。。。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**   </span></span><br><span class="line"><span class="comment"> * 该功能接口的实现类二</span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl2</span> <span class="keyword">implements</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"UserDaoImpl2执行了。。。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;当我们需要切换接口的实现类时，传统方式弊端就出来了，<code>UserService userService = new UserDaoImpl1();</code>改为<code>UserService userService = new UserDaoImpl2();</code>一个好的程序设计应尽量满足OCP原则，在尽量不修改程序源码的基础上对程序进行扩展。<br>&emsp;&emsp;上述接口和实现类之间的耦合可以通过工厂模式来解决。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanFactory</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> UserDao <span class="title">getUserDao</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> UserDaoImpl1();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;现在接口和实现类之间没有耦合，但是工厂和接口之间有耦合。如我们要切换接口实现类还要要去修改工厂类里面的方法，如改为<code>return new UserDaoImpl2();</code>。<br>&emsp;&emsp;要解决上述问题，需要通过<strong>工厂模式+反射+配置文件</strong>来实现程序解耦合。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userDao"</span> <span class="attr">class</span>=<span class="string">"xxx.UserDaoImpl1"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BeanFactory</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">getBean</span><span class="params">(String id)</span></span>&#123;</span><br><span class="line">		<span class="comment">//解析XML</span></span><br><span class="line">		<span class="comment">//反射</span></span><br><span class="line">		Class clazz = Class.forName(<span class="string">"xxxImpl"</span>);</span><br><span class="line">		<span class="keyword">return</span> clazz.newInstance();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="IOC的底层实现原理"><a href="#IOC的底层实现原理" class="headerlink" title="IOC的底层实现原理"></a>IOC的底层实现原理</h2><p>&emsp;&emsp;上述的<strong>工厂模式+反射+配置文件</strong>方式就是IOC的底层实现原理。</p>
-
+        
       
 		
 		
@@ -533,7 +521,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://blog.csdn.net/CPOHUI" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>我的csdn博客</a>
             </li>
           
             <li class="search-li">
