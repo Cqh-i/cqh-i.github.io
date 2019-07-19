@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://cqh-i.github.io">
   <title>Spring IOC 学习笔记 | 锦瑟年华,逐梦之人</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567891011121314151617181920212223242526/** 某功能接口*/public">
+  <meta name="description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。">
 <meta name="keywords" content="Spring,SpringIOC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring IOC 学习笔记">
 <meta property="og:url" content="https://cqh-i.github.io/2019/07/18/Spring-IOC-学习笔记/index.html">
 <meta property="og:site_name" content="锦瑟年华,逐梦之人">
-<meta property="og:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567891011121314151617181920212223242526/** 某功能接口*/public">
+<meta property="og:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-19T08:49:39.385Z">
+<meta property="og:updated_time" content="2019-07-19T08:51:27.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring IOC 学习笔记">
-<meta name="twitter:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。  与传统方式对比&amp;emsp;&amp;emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类： 1234567891011121314151617181920212223242526/** 某功能接口*/public">
+<meta name="twitter:description" content="什么是 IOC 全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。">
   
     <link rel="alternative" href="/atom.xml" title="锦瑟年华,逐梦之人" type="application/atom+xml">
   
@@ -215,6 +215,7 @@
         <h2 id="什么是-IOC"><a href="#什么是-IOC" class="headerlink" title="什么是 IOC"></a>什么是 IOC</h2><blockquote>
 <p>全称 Inversion of Control(控制反转)。将对象的创建权反转给了Spring。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="与传统方式对比"><a href="#与传统方式对比" class="headerlink" title="与传统方式对比"></a>与传统方式对比</h2><p>&emsp;&emsp;传统方式的调用中，接口和实现类之间的耦合度太高，不满足OCP原则(对修改关闭，对扩展开放)。如有一个接口和它的两个实现类：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 某功能接口</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**   </span></span><br><span class="line"><span class="comment"> * 该功能接口的实现类一</span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl1</span> <span class="keyword">implements</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"UserDaoImpl1执行了。。。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**   </span></span><br><span class="line"><span class="comment"> *该功能接口的实现类二</span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl2</span> <span class="keyword">implements</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"UserDaoImpl2执行了。。。"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
