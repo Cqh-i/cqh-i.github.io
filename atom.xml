@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cqh-i.github.io/"/>
-  <updated>2019-08-02T03:01:03.085Z</updated>
+  <updated>2019-08-02T09:24:14.099Z</updated>
   <id>https://cqh-i.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot真的很便利啊!!!</title>
+    <link href="https://cqh-i.github.io/2019/08/02/Spring-Boot%E9%9A%8F%E7%AC%94/"/>
+    <id>https://cqh-i.github.io/2019/08/02/Spring-Boot随笔/</id>
+    <published>2019-08-02T09:23:09.000Z</published>
+    <updated>2019-08-02T09:24:14.099Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://cqh-i.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 240. 搜索二维矩阵 II</title>
