@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cqh-i.github.io/"/>
-  <updated>2019-08-07T02:21:56.322Z</updated>
+  <updated>2019-08-09T15:32:11.086Z</updated>
   <id>https://cqh-i.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux基本命令</title>
+    <link href="https://cqh-i.github.io/2019/08/09/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/"/>
+    <id>https://cqh-i.github.io/2019/08/09/Linux基本命令/</id>
+    <published>2019-08-09T08:19:50.000Z</published>
+    <updated>2019-08-09T15:32:11.086Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><blockquote><p>Shell &#x662F;&#x6307;&#x4E00;&#x79CD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x754C;&#x9762;&#xFF0C;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x754C;&#x9762;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x7684;&#x670D;&#x52A1;&#x3002;&#x4E5F;&#x79F0;&#x547D;&#x4EE4;&#x89E3;&#x91CA;&#x5668;, &#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x76F8;&#x5E94;&#x547D;&#x4EE4;&#x3002;<br><a id="more"></a></p></blockquote><h2 id="shell-&#x5BB6;&#x65CF;"><a href="#shell-&#x5BB6;&#x65CF;" class="headerlink" title="shell &#x5BB6;&#x65CF;"></a>shell &#x5BB6;&#x65CF;</h2><ul><li><p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x6709;&#x54EA;&#x4E9B;shell:<br><code>cat /etc/shells</code><br><img src="/2019/08/09/Linux&#x57FA;&#x672C;&#x547D;&#x4EE4;/pic1.png" alt><br>(cat &#x547D;&#x4EE4;&#x662F;&#x7528;&#x6765;&#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8F93;&#x51FA;&#x5230;&#x8F93;&#x51FA;&#x8BBE;&#x5907;&#x4E0A;&#x7684;, &#x4F8B;&#x5982;&#x7EC8;&#x7AEF;)</p></li><li><p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;shell:<br><code>echo $SHELL</code><br><img src="/2019/08/09/Linux&#x57FA;&#x672C;&#x547D;&#x4EE4;/20190809051029739.png" alt><br>(echo &#x56DE;&#x663E;&#x547D;&#x4EE4;, &#x53EF;&#x663E;&#x793A;&#x666E;&#x901A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x53D8;&#x91CF;, &#x53D8;&#x91CF;&#x540D;&#x79F0;&#x524D;&#x9762;&#x52A0;$)<br><img src="/2019/08/09/Linux&#x57FA;&#x672C;&#x547D;&#x4EE4;/20190809051728065.png" alt></p></li></ul><h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><p>bash&#x662F;&#x8BB8;&#x591A;Linux&#x5E73;&#x53F0;&#x7684;&#x5185;&#x5B9A;Shell, &#x5E38;&#x89C1;shell:</p><blockquote><p>/bin/sh (&#x5DF2;&#x7ECF;&#x88AB;/bin/bash&#x6240;&#x53D6;&#x4EE3;)<br>/bin/bash (&#x5C31;&#x662F;Linux&#x9ED8;&#x8BA4;&#x7684;Shell)<br>&#x2026;&#x2026;</p></blockquote><p>Shell &#x811A;&#x672C;&#x5927;&#x81F4;&#x90FD;&#x96F7;&#x540C;, &#x4E00;&#x4E2A;Shell Script&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x5728;&#x5F88;&#x591A;&#x79CD;Shell&#x4E0A;&#x4F7F;&#x7528;.</p><h2 id="&#x547D;&#x4EE4;&#x8865;&#x9F50;&#x548C;&#x8DEF;&#x5F84;&#x8865;&#x9F50;"><a href="#&#x547D;&#x4EE4;&#x8865;&#x9F50;&#x548C;&#x8DEF;&#x5F84;&#x8865;&#x9F50;" class="headerlink" title="&#x547D;&#x4EE4;&#x8865;&#x9F50;&#x548C;&#x8DEF;&#x5F84;&#x8865;&#x9F50;"></a>&#x547D;&#x4EE4;&#x8865;&#x9F50;&#x548C;&#x8DEF;&#x5F84;&#x8865;&#x9F50;</h2><p>&#x5728;bash&#x4E0B;&#x6572;&#x547D;&#x4EE4;&#x65F6;, <strong>Tab&#x952E;</strong>&#x53EF;&#x4EE5;&#x8865;&#x5168;&#x5DF2;&#x7ECF;&#x6572;&#x4E86;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x76EE;&#x5F55;&#x540D;. Ubuntu&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x542F;&#x7528;&#x4E86;bash completion.<br><br>&#x5982;&#x679C;&#x5F85;&#x8865;&#x5168;&#x7684;&#x547D;&#x4EE4;&#x6216;&#x8DEF;&#x5F84;&#x6CA1;&#x6709;&#x6B67;&#x4E49;(&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;), &#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x8865;&#x5168;, &#x5426;&#x5219;, &#x518D;&#x6572;&#x4E00;&#x6B21;Tab&#x952E;, &#x5C06;&#x4F1A;&#x628A;&#x5F00;&#x5934;&#x76F8;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x6216;&#x547D;&#x4EE4;, &#x4F9B;&#x4F60;&#x9009;&#x62E9;.<br><img src="/2019/08/09/Linux&#x57FA;&#x672C;&#x547D;&#x4EE4;/20190809053902152.png" alt></p><h2 id="&#x5386;&#x53F2;&#x8BB0;&#x5F55;"><a href="#&#x5386;&#x53F2;&#x8BB0;&#x5F55;" class="headerlink" title="&#x5386;&#x53F2;&#x8BB0;&#x5F55;"></a>&#x5386;&#x53F2;&#x8BB0;&#x5F55;</h2><p><code>history</code>&#x547D;&#x4EE4;&#x53EF;&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x4F60;&#x6240;&#x6709;&#x8F93;&#x5165;&#x8FC7;&#x7684;&#x547D;&#x4EE4;<br><img src="/2019/08/09/Linux&#x57FA;&#x672C;&#x547D;&#x4EE4;/20190809054642475.png" alt><br>&#x6309;&#x4E0A;&#x4E0B;&#x79FB;&#x52A8;&#x5149;&#x6807;&#x952E;&#x53EF;&#x4EE5;&#x4E00;&#x6761;&#x4E00;&#x6761;&#x5730;&#x6D4F;&#x89C8;&#x4EE5;&#x524D;&#x8F93;&#x5165;&#x8FC7;&#x7684;&#x547D;&#x4EE4;<br><code>ctrl + r</code>&#x53EF;&#x4EE5;&#x67E5;&#x627E;&#x4F60;&#x8F93;&#x5165;&#x8FC7;&#x7684;&#x547D;&#x4EE4;</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Shell&quot;&gt;&lt;a href=&quot;#Shell&quot; class=&quot;headerlink&quot; title=&quot;Shell&quot;&gt;&lt;/a&gt;Shell&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Shell &amp;#x662F;&amp;#x6307;&amp;#x4E00;&amp;#x79CD;&amp;#x5E94;&amp;#x7528;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x8FD9;&amp;#x4E2A;&amp;#x5E94;&amp;#x7528;&amp;#x7A0B;&amp;#x5E8F;&amp;#x63D0;&amp;#x4F9B;&amp;#x4E86;&amp;#x4E00;&amp;#x4E2A;&amp;#x754C;&amp;#x9762;&amp;#xFF0C;&amp;#x7528;&amp;#x6237;&amp;#x901A;&amp;#x8FC7;&amp;#x8FD9;&amp;#x4E2A;&amp;#x754C;&amp;#x9762;&amp;#x8BBF;&amp;#x95EE;&amp;#x64CD;&amp;#x4F5C;&amp;#x7CFB;&amp;#x7EDF;&amp;#x5185;&amp;#x6838;&amp;#x7684;&amp;#x670D;&amp;#x52A1;&amp;#x3002;&amp;#x4E5F;&amp;#x79F0;&amp;#x547D;&amp;#x4EE4;&amp;#x89E3;&amp;#x91CA;&amp;#x5668;, &amp;#x6839;&amp;#x636E;&amp;#x8F93;&amp;#x5165;&amp;#x7684;&amp;#x547D;&amp;#x4EE4;&amp;#x6267;&amp;#x884C;&amp;#x76F8;&amp;#x5E94;&amp;#x547D;&amp;#x4EE4;&amp;#x3002;&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://cqh-i.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编程语言发展</title>
+    <link href="https://cqh-i.github.io/2019/08/09/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%8F%91%E5%B1%95/"/>
+    <id>https://cqh-i.github.io/2019/08/09/编程语言发展/</id>
+    <published>2019-08-09T07:48:11.000Z</published>
+    <updated>2019-08-09T07:57:28.392Z</updated>
+    
+    <content type="html"><![CDATA[<div class="table-container"><table><thead><tr><th>&#x8F88;&#x5206;</th><th>&#x8BED;&#x8A00;&#x540D;&#x79F0;</th><th>&#x7279;&#x70B9;</th><th>&#x8DE8;&#x5E73;&#x53F0;&#x6027;</th></tr></thead><tbody><tr><td>&#x7B2C;&#x4E00;&#x4EE3;</td><td>&#x673A;&#x5668;&#x8BED;&#x8A00;</td><td>0101 &#x4E8C;&#x8FDB;&#x5236;</td><td></td></tr><tr><td>&#x7B2C;&#x4E8C;&#x4EE3;</td><td>&#x6C47;&#x7F16;&#x8BED;&#x8A00;</td><td>ADD EAX, EBX &#x52A9;&#x8BB0;&#x7B26;</td><td></td></tr><tr><td>&#x7B2C;&#x4E09;&#x4EE3;</td><td>C&#x8BED;&#x8A00;</td><td>&#x9762;&#x5411;&#x8FC7;&#x7A0B;, &#x6613;&#x4E8E;&#x7406;&#x89E3;, &#x8BB0;&#x5FC6;&#x548C;&#x4F7F;&#x7528;</td><td>&#x8DE8;&#x5E73;&#x53F0;</td></tr><tr><td>&#x7B2C;&#x56DB;&#x4EE3;</td><td>C++, java, C#</td><td>&#x9762;&#x5411;&#x5BF9;&#x8C61;, &#x6613;&#x4E8E;&#x7EF4;&#x62A4;, &#x4EE3;&#x7801;&#x53EF;&#x590D;&#x6027;&#x5F3A;</td><td>&#x8DE8;&#x5E73;&#x53F0;</td></tr><tr><td>&#x7B2C;&#x4E94;&#x4EE3;</td><td>go, python, ruby</td><td>&#x89E3;&#x91CA;&#x6027;&#x8BED;&#x8A00;,&#x4E0D;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x76F4;&#x63A5;&#x8FD0;&#x884C;</td><td>&#x8DE8;&#x5E73;&#x53F0;</td></tr><tr><td>&#x7B2C;&#x516D;&#x4EE3;</td><td>&#x81EA;&#x7136;&#x8BED;&#x8A00;</td><td>&#x63A5;&#x8FD1;&#x4EBA;&#x7C7B;&#x8BED;&#x8A00;</td><td>&#x3000;</td></tr></tbody></table></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;table-container&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;#x8F88;&amp;#x5206;&lt;/th&gt;
+&lt;th&gt;&amp;#x8BED;&amp;#x8A00;&amp;#x540D;&amp;#x79F0;&lt;/th&gt;
+&lt;th&gt;&amp;#x7279;&amp;#x70B9;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="编程语言发展" scheme="https://cqh-i.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%8F%91%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>灵魂摆渡黄泉</title>
