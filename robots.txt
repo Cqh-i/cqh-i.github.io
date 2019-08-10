@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Allow: /tags/
 Allow: /archives/
+Allow: /建站日志/
 
 Disallow: /vendors/
 Disallow: /js/
