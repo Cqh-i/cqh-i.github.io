@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Allow: /tags/
+Allow: /categories/随笔/
 Allow: /archives/
 Allow: /建站日志/
 
